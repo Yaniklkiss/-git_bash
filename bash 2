@@ -1,0 +1,63 @@
+cd ~
+mkdir test3
+cd test3
+touch 4 5 6
+ls test3
+
+echo row1 >> test3/4
+echo row2 >> test3/4
+echo row3 >> test3/4
+echo row4 >> test3/4
+echo row1 >> test3/5
+echo row2 >> test3/5
+echo row3 >> test3/5
+echo row4 >> test3/5
+echo row1 >> test3/6
+echo row2 >> test3/6
+echo row3 >> test3/6
+echo row4 >> test3/6
+
+
+
+grep "row2" test3/5
+grep -r "row" test3
+grep -c "row" test3/6
+
+
+find test3/ -name "5"
+find test3/ -name "5" -delete
+
+
+echo test >> test3/4
+
+nano test3/4
+ctrl \
+test
+fail
+a
+ctrl o
+ctrl x
+
+echo test >> test3/4
+
+
+ps aux
+
+kill 666
+
+ping rusau.net
+ping -c 5 rusau.net
+
+curl https://petstore.swagger.io/v2/pet/findByStatus?status=available
+curl -X 'POST' \
+  'https://petstore.swagger.io/v2/user' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "username": "yana",
+  "firstName": "yana",
+  "lastName": "dz",
+  "email": "*********@gmail.com",
+  "password": "12345",
+  "phone": "37529000000"
+}'  
